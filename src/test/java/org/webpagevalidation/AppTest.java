@@ -27,6 +27,6 @@ class AppTest {
 
     @Test
     void validate() {
-        Assertions.assertTrue(App.validate("https://www.google.com","Gmail"));
+        Assertions.assertTrue(App.validate("https://www.google.com","Gmail1"));
     }
 }
