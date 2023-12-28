@@ -1,22 +1,33 @@
 package org.webpagevalidation;
 
-import org.jetbrains.annotations.NotNull;
+
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
 public class App
 {
+    public static final String[] appList = {
+            "Gmail",
+            "Google",
+            "Images"
+    };
+    public static String url = "https://www.google.com";
+    public static void main(String[] args) {
+        for (String app : appList){
+            System.out.println(app + " : " + validate(url,app));
+        }
+    }
 
-    public static @NotNull String webText(String url) {
-        Document document = null;
+    public static String jsoupGetText(String url){
         try {
-            document = Jsoup.connect(url).get();
+            return Jsoup.connect(url).get().text();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        String body = document.body().wholeText();
-        return body;
     }
+    public static boolean validate(String url, String text){
+        return jsoupGetText(url).contains(text);
+    }
+
 }

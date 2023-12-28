@@ -1,20 +1,32 @@
 package org.webpagevalidation;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    public void testApp()
-    {
-        String url = "https://www.google.co.in";
-        String text = "Google";
-        if(App.webText(url).contains(text)){
-            System.out.println(url+" contains text "+text);
-        }
+import static org.junit.jupiter.api.Assertions.*;
 
+class AppTest {
+
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+//
+//    @Test
+//    void main() {
+//    }
+//
+//    @Test
+//    void jsoupGetText() {
+//    }
+
+    @Test
+    void validate() {
+        Assertions.assertTrue(App.validate("https://www.google.com","Gmail"));
     }
 }
