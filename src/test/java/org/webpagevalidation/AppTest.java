@@ -15,16 +15,8 @@ class AppTest {
     void tearDown() {
     }
 
-//    @Test
-//    void main() {
-//    }
-
-//    @Test
-//    void jsoupGetText() {
-//    }
-
     @Test
     void validate() {
-        Assertions.assertTrue(App.validate("https://www.google.com","Gmail1"));
+        Assertions.assertTrue(App.validate("https://www.google.com","Gmail"));
     }
 }
