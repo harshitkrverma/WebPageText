@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class AppTest {
 
     @BeforeEach
@@ -16,11 +14,11 @@ class AppTest {
     @AfterEach
     void tearDown() {
     }
-//
+
 //    @Test
 //    void main() {
 //    }
-//
+
 //    @Test
 //    void jsoupGetText() {
 //    }
