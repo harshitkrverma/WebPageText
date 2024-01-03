@@ -19,6 +19,8 @@ class AppTest {
     @ParameterizedTest
     @ValueSource(strings = {"Gmail", "Google", "Images"})
     void validateUrl(String testStr) {
-        Assertions.assertTrue(App.validate("https://www.google.com",testStr));
+        String url ="";
+        url = System.getProperty("baseURL");
+        Assertions.assertTrue(App.validate(url,testStr));
     }
 }

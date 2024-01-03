@@ -7,15 +7,15 @@ import java.io.IOException;
 
 public class App
 {
-    public static final String[] appList = {
+    protected static final String[] appList = {
             "Gmail",
             "Google",
             "Images"
     };
-    public static String url = "https://www.google.com";
     public static void main(String[] args) {
+        String testURL = "https://www.google.com";
         for (String app : appList){
-            System.out.println(app + " : " + validate(url,app));
+            validate(testURL,app);
         }
     }
 
