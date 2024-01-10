@@ -1,10 +1,7 @@
 package org.webpagevalidation;
 
-
 import org.jsoup.Jsoup;
-
 import java.io.IOException;
-
 public class App
 {
     protected static final String[] appList = {
