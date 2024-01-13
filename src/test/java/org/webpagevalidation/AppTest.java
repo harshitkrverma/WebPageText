@@ -1,27 +1,21 @@
 package org.webpagevalidation;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+import java.util.HashMap;
 
 class AppTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
-    @ParameterizedTest
-    @ValueSource(strings = {"Gmail", "Google", "Images"})
-    void validateUrl(String testStr) {
-//        String url ="";
-//        url = System.getProperty("baseURL");
-//        Assertions.assertTrue(App.validate(url,testStr))
-        Assertions.fail();
+    @Test
+    void test() throws IOException {
+        HashMap<String, Boolean> map = new HashMap<>();
+        map.put("Obj1",true);
+        map.put("Obj2 ",false);
+        map.put("Obj3",true);
+        map.put("Obj4",true);
+        map.put("Object 5",false);
+       HashMapToHtmlTable.writeHashMapToHtmlFile(map,"Report.html");
+       Assertions.fail();
     }
 }
