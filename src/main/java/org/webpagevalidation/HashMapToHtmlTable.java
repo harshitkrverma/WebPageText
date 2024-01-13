@@ -18,7 +18,7 @@ public class HashMapToHtmlTable {
     }
     public static void writeHashMapToHtmlFile(Map<String, Boolean> map, String fileName) throws IOException {
         StringBuilder htmlTable = new StringBuilder();
-        htmlTable.append("<table style='border: 2px solid black; background-color: LightGrey;'>\n");
+        htmlTable.append("<html><body><table style='border: 2px solid black; background-color: LightGrey;'>\n");
         htmlTable.append("<tr><th style='border: 2px solid black;'>App</th><th style='border: 2px solid black;'>Test Result</th></tr>\n");
 
         for (Map.Entry<String, Boolean> entry : map.entrySet()) {
@@ -28,7 +28,7 @@ public class HashMapToHtmlTable {
             htmlTable.append("<tr><td style='border: 2px solid black; padding: 10px; text-align: center;'>").append(key).append("</td><td style='border: 2px solid black; background-color:").append(color).append("; padding: 10px; text-align: center;'>").append(value).append("</td></tr>\n");
         }
 
-        htmlTable.append("</table>");
+        htmlTable.append("</table></body></html>");
 
         BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
         writer.write(htmlTable.toString());
